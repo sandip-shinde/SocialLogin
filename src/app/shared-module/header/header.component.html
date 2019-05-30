@@ -1,0 +1,28 @@
+﻿<div class="page-header marginZero">
+    <div class="container-fluid">
+        <div class="pull-left">
+                
+        </div>
+        <div class="pull-right headerRightSection">
+            <div class="headerContent userName">
+                    <div (keyup.enter)="toggleUserMenu()" class="dropdown top-right-drp-down-menu" #userNavigationMenu (keyup.esc)="toggleUserMenu(true)">
+                        <a class="userName"  data-toggle="dropdown" >
+                            <span>{{'SHARED.HEADER.userMenu.userMessage' | translate }} </span><span class="userName">{{userName}}</span>
+                        </a>
+                        <div class="jsProfileMenu element-focus-indicator uname-carot" data-toggle="dropdown" ></div>
+                        <ul class="top-menu-imp dropdown-menu displaynone jsProfileSubMenu" role="menu" aria-labelledby="dLabel">
+                            
+                            <li>
+                                <a class="link-new-window" data-toggle="modal" data-target=".bs-example-modal-sm" id="logoutLink" href="javascript:void(0)" (click)="showLogoutConfirmation()">
+                                    {{'SHARED.HEADER.userMenu.logoutMenu' | translate }}                                    
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="clear-fix"></div>
+                </div>
+                <logout-confirmation (onLogoutConfirmation)="onLogoutConfirmation($event)" #logout></logout-confirmation>               
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

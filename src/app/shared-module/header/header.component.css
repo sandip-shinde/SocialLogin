@@ -1,0 +1,218 @@
+﻿
+/* Start : Header */
+.page-header .headerLogo{
+	float: right;
+	margin: 15px 0 0 10px;
+    height: 26px !important;
+}
+
+
+/*.page-header img{
+	height: 100%;	
+}*/
+
+.page-header .pull-left{
+	padding-top:3px;
+}
+
+.page-header .hamburgerIcon{
+	width: 20px;
+    cursor: pointer;
+    background-image: url('/assets/images/hamburgerIcon.png');
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 20px 20px;
+    display: inline-block;
+    position:relative;
+}
+
+.page-header .mainLogo{
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.page-header .mainLogo img{
+	vertical-align: baseline;
+    height:44px;
+    position:relative;
+    top:4px;
+    left:15px;
+}
+
+.page-header .headerClock{
+	height: 80% !important;
+    background-image: url('/assets/images/clock.png');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    width: 40px;
+    background-position: 0 5px;
+}
+
+.page-header .headerContent{    
+    float: left;
+    margin: 18px 40px 0 13px;
+    background-size: 15%;
+    position:relative;
+}
+.headerContent a{color:#333333;}
+.headerContent a:hover{text-decoration:none; color:#333333;}
+.uname-carot:active {
+    outline: 0 solid #ffffff;
+}
+
+.page-header .headerRightSection > div{
+	display: inline-block;
+}
+/* End : Header */
+
+
+/* hamburger menu css starts*/
+
+/* ==================================== */
+/*                                             Navigaton Menu                            
+/* ==================================== */
+
+.menu-wrap {
+                background-color: #D0D0D0;
+                position: fixed;
+                top: 0;
+                height:auto!important;
+                width: 222px;
+                /*margin-top: -770px;*/
+                /*opacity:0;*/
+                font-size: 1em;
+                font-weight: 700;
+                /*overflow: auto;*/
+                transition: .25s;
+                z-index: 10;
+                display:none;
+}
+.menu-show {
+                opacity:1;
+                display:block;
+                box-shadow: 4px 2px 15px 1px #B9ADAD;
+                left: 0px;
+}
+.menu-sidebar {
+                margin: 26px 0 26px 35px;
+                position: relative;
+                top: 0px;
+}
+.menu-sidebar li {
+                padding: 15px 0px 0;
+}
+.menu-sidebar li > a {
+                color: #093b5c;
+                position: relative;
+}
+.menu-sidebar li > a:hover{text-decoration:none;}
+.menu-sidebar li > a::after {
+                content: "";
+                display: block;
+                height: 0.15em;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 50%;
+                transform: translate(-50%);
+                background-image: linear-gradient(to right, transparent 50.3%, #F7611B 50.3%);
+                transition: background-position .2s .1s ease-out;
+                background-size: 203% auto;
+}
+.menu-sidebar li > a:hover::after {
+                background-position: -100% 0;
+}
+.menu-sidebar .menu-item-has-children {
+                position: relative;
+}
+.menu-sidebar .menu-item-has-children .sub-menu {
+                display: none;
+    margin-left:11px;
+}
+.sidebar-menu-arrow{cursor:pointer;}
+.sidebar-menu-arrow::after {
+                content: "\f107";
+                font-family: 'FontAwesome';
+                padding: 10px;
+                color: #093b5c;
+                position: relative;
+                cursor:pointer;
+}
+.sidebar-menu-arrow:hover::after {
+                cursor: pointer;
+                color: #000000;
+}
+.sidebar-menu-arrow:active::after {
+                top: .5px;
+}
+/*Hamburger Button*/
+button.toggle-button:focus{outline:0px solid #ffffff!important;}
+.toggle-button {
+                left: 5px;
+                position: absolute;
+                transition: all 0.25s ease 0s;
+                width: 34px;
+                z-index: 15;
+                background-color: transparent;
+                border: 0px solid transparent;
+                border-radius: 0px;
+                height: 23px;
+                top:12px;
+}
+.toggle-button:hover {
+                cursor: pointer;
+}
+.toggle-button .menu-bar {
+                position: absolute;
+                border-radius:0px;
+                width: 62%;
+                transition: .5s;
+}
+.toggle-button .menu-bar-top {
+                border: 4px solid #333333;
+                border-bottom: none;
+                top: 0;
+                height:auto!important;
+                width:86%;
+}
+.toggle-button .menu-bar-middle {
+                height: 4px;
+                background-color: #333333;
+                margin-top: 7px;
+                margin-bottom: 7px;
+                top: 2px;
+                width:86%;
+}
+.toggle-button .menu-bar-bottom {
+                border: 4px solid #333333;
+                border-top: none;
+                top: 18px;
+                height:auto!important;
+                width:86%;
+}
+.button-open {
+                left: 5px;
+    position:fixed;
+}
+.button-open .menu-bar-top {
+                border-color: #093b5c;
+                transform: rotate(45deg) translate(6px, 6px);
+                transition: .5s;
+}
+.button-open .menu-bar-middle {
+                background-color: #093b5c;
+                transform: translate(230px);
+                transition: .1s ease-in;
+                opacity: 0;
+}
+.button-open .menu-bar-bottom {
+                border-color: #093b5c;
+                transform: rotate(-45deg) translate(7px, -7px);
+                transition: .5s;
+}
+.menu-sidebar ul.menu{text-align:left;}
+.menu-sidebar ul.menu li a{text-decoration:none; font-size:15px;}
+.dropdown a{color:#333333;}
+.ham-sub-menu-down{margin-left:10px;}
+/* hamburger menu css ends*/
+/*shop page catalog display css ends here*/

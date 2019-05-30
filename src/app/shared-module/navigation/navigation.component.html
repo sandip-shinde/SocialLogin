@@ -1,0 +1,27 @@
+﻿<nav id="navbar" class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#toggleNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="toggleNavbar">
+            <ul id="menuList" class="nav navbar-nav">
+                <li>
+                    <a [routerLink]="['/product']" draggable="false" >{{'SHARED.NAVIGATION.productMenu' | translate }}</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/offer']" draggable="false" >{{'SHARED.NAVIGATION.offerMenu' | translate }}</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/order']" draggable="false">{{'SHARED.NAVIGATION.orderMenu' | translate }}</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/invoice']" draggable="false">{{'SHARED.NAVIGATION.invoiceMenu' | translate }}</a>
+                </li>
+            </ul>
+         </div>
+    </div>
+</nav>

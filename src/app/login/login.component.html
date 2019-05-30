@@ -1,0 +1,53 @@
+﻿<div class="container-fluid" *ngIf="showLogin">
+    <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+        </div> 
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" >
+            <div class="login-base-container">
+                <h1 class="login-title">{{'PUBLIC.Login.title' | translate }}</h1>
+                <div class="login-form">
+                    <form role="form">
+                        <div class="form-group pos-relative">
+                            <i class="fa fa-envelope-o login-ico" aria-hidden="true"></i>
+                            <input focusIndex="1" [attr.aria-label]="'SHARED.ARIALABLES.loginPage_email_input' | translate" type="email" name="emailAddress" class="form-control" id="email" placeholder="{{'PUBLIC.Login.emailAddressPlaceHolder' | translate }}" [(ngModel)]="model.emailAddress" (keyup.enter)="login()" #email>
+                        </div>
+                        <div class="form-group pos-relative">
+                            <i class="fa fa-lock login-ico" aria-hidden="true"></i>
+                            <input focusIndex="2" [attr.aria-label]="'SHARED.ARIALABLES.loginPage_password_input' | translate" name="password" type="password" class="form-control" id="pwd" placeholder="{{'PUBLIC.Login.passwordPlaceHolder' | translate }}" [(ngModel)]="model.password" (keyup.enter)="login()" #password>
+                        </div>
+                        <button type="button" class="btn btn-default" id="loadButton" (click)="login()" focusIndex="3">{{'PUBLIC.Login.loginButton' | translate }}<span *ngIf="model.isAuthInitiated == true"> ... <i class='fa fa-spinner fa-spin'> </i></span></button>                                                                      
+                   </form>   
+            </div>       
+            </div> 
+         </div> 
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" >
+            <div class="login-base-container">               
+                <div class="login-form">
+                      <h1 class="login-title">{{'PUBLIC.Login.title' | translate }}</h1>
+                    <div class="social">
+                        <h4 style="margin: 0 0 41px 0px;">Connect with social Sign In</h4>
+                        <ul>
+                            <li>
+                                <a href="#" (click)="socialSignIn('google')" class="google-plus">
+                                  <span class="fa fa-google"></span>
+                                </a>
+                              </li>  
+                              <!-- <li>
+                                <a href="#" (click)="socialSignIn('facebook')" class="facebook">
+                                  <span class="fa fa-facebook"></span>
+                                </a>
+                              </li>                          -->
+                        </ul>
+                       </div>
+                </div>                
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+        </div> 
+    </div>  
+    <div class="row">
+        <div class="login-pg-container col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
+          
+        </div>
+    </div>     
+</div>

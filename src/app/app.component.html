@@ -1,0 +1,29 @@
+<error-dialog></error-dialog>
+<p-toast [style]="{marginTop: '10px'}" position="top-center"></p-toast>
+
+<div *ngIf="isUserLoggedIn">
+  <header></header>
+  <navigation-tabs></navigation-tabs>
+  <div id="main-content-area" class="site-container element-focus-indicator">
+      <router-outlet></router-outlet>
+  </div>
+  <footer></footer>
+</div>
+
+<div id="login-pg" *ngIf="!isUserLoggedIn">    
+  <div class="container-fluid">
+      <div class="row">
+          <div class="empty-login-banner">
+          </div>
+          <div class="clearfix"></div>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="xp-login-footer">                
+          </div>
+          <div class="clearfix"></div>
+      </div>
+  </div>
+</div>
